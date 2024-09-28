@@ -21,7 +21,7 @@ public class GroomService : Groom.GroomBase
         // _logger.LogInformation($"Room no. {roomNum}");
         // var resp = new RoomRegistrationResponse { RoomId = roomNum };
         // return Task.FromResult(resp);
-
+      
         UsersQueues.CreateUserQueue(request.RoomName,request.UserName);
         var resp = new RoomRegistrationResponse(){Joined=true};
         return await Task.FromResult(resp);
